@@ -7,21 +7,16 @@
 namespace Ucu.Poo.RideShare
 {
     /// <summary>
-    /// Usuario del programa
+    /// Pasajero del programa.
     /// </summary>
     public class Passenger : User
     {
-        private int qualy;
+        private readonly int qualy;
 
-        public Passenger(int qualy)
+        public Passenger(string name, string lastName, string id, string profilePic, int qualy)
+            : base(name, lastName, id, profilePic)
         {
             this.qualy = qualy;
         }
-
-        public override string WelcomeMessage()
-        {
-            return $"{this.profilePic}. {this.name}";
-        }
-
     }
 }

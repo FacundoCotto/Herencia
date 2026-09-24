@@ -7,27 +7,22 @@
 namespace Ucu.Poo.RideShare
 {
     /// <summary>
-    /// Usuario del programa
+    /// Conductor común del programa.
     /// </summary>
     public class Driver : User
     {
-        private string bio;
+        public string Bio { get; }
 
-        private int qualy;
+        private readonly int qualy;
 
-        private Car car;
+        private readonly Car car;
 
-        public Driver(string bio, int qualy, Car car)
+        public Driver(string name, string lastName, string id, string profilePic, string bio, int qualy, Car car)
+            : base(name, lastName, id, profilePic)
         {
-            this.bio = bio;
+            this.Bio = bio;
             this.qualy = qualy;
             this.car = car;
         }
-
-        public override string WelcomeMessage()
-        {
-            return $"{this.profilePic}. {this.bio}. Welcome {this.name}";
-        }
-
     }
 }

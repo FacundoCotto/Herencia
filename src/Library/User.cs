@@ -4,25 +4,28 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
+using System;
+
 namespace Ucu.Poo.RideShare
 {
     /// <summary>
-    /// Usuario del programa
+    /// Usuario del programa.
     /// </summary>
-    public abstract class User
+    public class User
     {
-        protected string name;
+        private readonly string id;
+        public string Name { get; }
 
-        protected string lastName;
+        public string LastName { get; }
 
-        protected string id;
+        public string ProfilePic { get; }
 
-        protected string profilePic;
-
-        public virtual string WelcomeMessage()
+        public User(string name, string lastName, string id, string profilePic)
         {
-            return "";
+            this.Name = name;
+            this.LastName = lastName;
+            this.id = id;
+            this.ProfilePic = profilePic;
         }
-
     }
 }

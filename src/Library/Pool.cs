@@ -7,14 +7,14 @@
 namespace Ucu.Poo.RideShare
 {
     /// <summary>
-    /// Usuario del programa
+    /// Conductor Pool del programa.
     /// </summary>
     public class Pool : Driver
     {
-        private int maxCapacity;
+        private readonly int maxCapacity;
 
-        public Pool(int maxCapacity, string bio, int qualy, Car car)
-        : base(bio, qualy, car)
+        public Pool(string name, string lastName, string id, string profilePic, string bio, int qualy, Car car, int maxCapacity)
+        : base(name, lastName, id, profilePic, bio, qualy, car)
         {
             this.maxCapacity = maxCapacity;
         }
